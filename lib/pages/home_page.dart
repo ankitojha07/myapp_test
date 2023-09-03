@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('My App'),
+        title: Text('CodeforCoffee'),
       ),
       body: Center(
         child: Padding(
@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
               'Hello Flutter World! my name is $name & my age is $age today is $day'),
         ),
       ),
-      drawer: const Drawer(),
+      // drawer: const Drawer(),
     );
   }
 }
