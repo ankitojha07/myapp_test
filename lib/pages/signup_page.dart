@@ -7,7 +7,13 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
         child: Center(
-      child: Text("Sign Up Page!"),
+      child: Text(
+        "Sign Up Page!",
+        style: TextStyle(
+            fontSize: 40,
+            fontWeight: FontWeight.bold,
+            color: Colors.blueAccent),
+      ),
     ));
   }
 }
