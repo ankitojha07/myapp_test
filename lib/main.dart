@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp_test/pages/home_page.dart';
+import 'package:myapp_test/pages/login_page.dart';
+import 'package:myapp_test/pages/signup_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bringMeSome(87, bag: false, rupees: 25);
     return MaterialApp(
-      home: HomePage(),
+      debugShowCheckedModeBanner: false,
+      // home: HomePage(),
       themeMode: ThemeMode.dark,
       darkTheme: ThemeData(
           // brightness: Brightness.dark,
@@ -21,14 +23,11 @@ class MyApp extends StatelessWidget {
         // brightness: Brightness.dark,
         primarySwatch: Colors.red,
       ),
-      debugShowCheckedModeBanner: false,
+      routes: {
+        "/": (context) => HomePage(),
+        "/login": (context) => LoginPage(),
+        "/signup": (context) => SignUpPage(),
+      },
     );
-  }
-
-  int bringMeSome(int sum, {required int rupees, required bool bag}) {
-    // take cycle
-    sum = sum + rupees;
-    // go to shop
-    return sum;
   }
 }
