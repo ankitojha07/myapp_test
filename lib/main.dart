@@ -10,9 +10,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bringMeSome(87, bag: false, rupees: 25);
     return const MaterialApp(
       home: HomePage(),
       debugShowCheckedModeBanner: false,
     );
+  }
+
+  int bringMeSome(int sum, {required int rupees, required bool bag}) {
+    // take cycle
+    sum = sum + rupees;
+    // go to shop
+    return sum;
   }
 }
