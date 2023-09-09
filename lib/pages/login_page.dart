@@ -6,9 +6,13 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Material(
+      color: Colors.white,
       child: Column(
         children: [
-          Image(image: AssetImage('assets/images/login_image.png')),
+          Image(
+            image: AssetImage('assets/images/login_image.png'),
+            fit: BoxFit.cover,
+          ),
           Text(
             "Login Here",
             style: TextStyle(
